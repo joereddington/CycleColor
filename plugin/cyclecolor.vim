@@ -58,7 +58,7 @@
 "        Notification of same-named schemes in different directories.
 "        Allow blacklisting specific colorscheme files.
 
-let s:schemes = "\n".globpath(&rtp, "colors/*.vim")."\n"
+let s:schemes = "\n".globpath($HOME,".vim/colourschemes/*.vim")."\n"
 let s:currentfile = ""
 let s:currentname = ""
 
@@ -119,7 +119,7 @@ command! CycleColorNext :call s:CycleColor(1)
 command! CycleColorPrev :call s:CycleColor(-1)
 command! CycleColorRefresh :call s:CycleColorRefresh()
 
-nnoremap <f4> :CycleColorNext<cr>
-nnoremap <f3> :CycleColorPrev<cr>
+nnoremap <PageUp> :CycleColorNext<cr>
+nnoremap <PageDown> :CycleColorPrev<cr>
 
 " vi:set ai ts=4 sw=4 tw=0:
